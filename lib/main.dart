@@ -57,24 +57,37 @@ class _MyHomePageState extends State<MyHomePage> {
   int _calories = 0;
 
   void _incrementCalories() {
+    final TextEditingController controller = TextEditingController();
+
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text('Add Calories'),
           content: TextField(
+            controller: controller,
             keyboardType: TextInputType.number,
             decoration: InputDecoration(hintText: "Enter calories"),
-            onChanged: (value) {
-              setState(() {
-                _calories += int.parse(value);
-              });
-            },
           ),
           actions: <Widget>[
             TextButton(
+              child: Text('CANCEL'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
               child: Text('OK'),
               onPressed: () {
+                final text = controller.text.trim();
+                if (text.isNotEmpty) {
+                  final parsed = int.tryParse(text);
+                  if (parsed != null) {
+                    setState(() {
+                      _calories += parsed;
+                    });
+                  }
+                }
                 Navigator.of(context).pop();
               },
             ),
