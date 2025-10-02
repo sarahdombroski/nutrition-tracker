@@ -206,469 +206,469 @@
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Accessibility.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/Accessibility-DL29Y3FEKFL8FZKCHXDT0MVO7.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/Accessibility-APBU899SCC690B1WBMGGA710W.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Accessibility"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/AppKit.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/AppKit-6YTHMLXEV03XE75EY8E3ZOC50.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/AppKit-1A4RVTHBT4Z1OLVXNNN16DVRH.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "AppKit"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ApplicationServices.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/ApplicationServices-6FBX6AXA8EZPUH5RCN6I05LD.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/ApplicationServices-BHE5YWTAEDTEQ2N2VVM79VC2B.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ApplicationServices"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CFNetwork.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CFNetwork-DPBHP6IOVS34RPTVKJRCPN5M5.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CFNetwork-BE3GJIY786BT37GTHOS0E97Q4.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CFNetwork"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/cups.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CUPS-48459PGWN4J1UJYBN8V8R4NP.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CUPS-A41IQ1J3NE441V2F1FUTTSOCR.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CUPS"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Cocoa.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/Cocoa-B2XO8SWF3XEISF54TN3GKVU2Z.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/Cocoa-9NYPR24FKB72U2KQ7RFB93PZ6.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Cocoa"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ColorSync.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/ColorSync-41VRMACJAKFLHQ8HR4QEOTIIV.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/ColorSync-C4M0CPS43GKMJGBFF2C8DIJHD.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ColorSync"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreAudio.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreAudio-8SHYINNLU9563Z4N7VX9B1JI8.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreAudio-2SPY4F38V8FKIGXXCMLMT2XMD.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreAudio"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreAudioTypes.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreAudioTypes-C9CSPBP3XY0IP5100DRB9EBNS.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreAudioTypes-EBEN64D9D9V1NVQ9OR6TZ9YM2.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreAudioTypes"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreData.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreData-4TE6WQSE8A8H0451W58NB8JIZ.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreData-DN9715UZUG2ASNMX6GZIVOKFK.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreData"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreFoundation.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreFoundation-3IM6TQPQ7THKMLG4LJNMQX6HG.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreFoundation-BYGH5P515UBVTESB5DC3KYJBA.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreFoundation"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreGraphics.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreGraphics-51TJ4U1ECA5WZV6LHTO579UFS.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreGraphics-EI78W5JF8W3L474LHJQRBGLM3.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreGraphics"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreImage.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreImage-8UH77PM1Y4P3KIO7ZJWY6PV8M.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreImage-850E8PFVIRQG5ZBWZ2WSIC2CX.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreImage"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreMedia.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreMedia-4C6F4Q65ZOR3IVP48SKP4RKWW.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreMedia-CHOWJQCE44YOXON0PUGTQ85AI.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreMedia"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreServices.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreServices-6VB1H1KHKZPW0YV8QGWUFUTAA.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreServices-1P5SG03N8MJ5ON436YJBERGMA.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreServices"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreText.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreText-B4TMBHZRXK26DTQUL7AJ7PGNR.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreText-7I6JB55EIJ6DOHRTMA0T7NIQ5.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreText"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreTransferable.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreTransferable-CE7RPMRLX4SMK856WE7XXLHQQ.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreTransferable-5YP44WIMJXGLLDUR3VJB55L8T.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreTransferable"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreVideo.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/CoreVideo-C2A5Y5CQDFJ64976BIY1MQD2.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/CoreVideo-1IRU4S1E0ZDR773DUV0U7IYNH.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreVideo"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/Darwin.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/Darwin-96QSF3N2QCVS8WC8HKBUS3KM7.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/Darwin-8XZTT0DH41S8028XZ4JKE0AYE.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Darwin"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DataDetection.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/DataDetection-CC8YAB9YUWZJ2TRPTUFBMTO2H.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/DataDetection-CJR2G64KQZM3GPBJVOCAX14QH.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "DataDetection"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DeveloperToolsSupport.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/DeveloperToolsSupport-AMU7QDFHYC9K3ZJRPBTW4V7B4.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/DeveloperToolsSupport-DH7JKI5P4LO22EHWE3YB3UN7G.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "DeveloperToolsSupport"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DiskArbitration.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/DiskArbitration-594WETXX6M53WWEJYFC3TMPYI.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/DiskArbitration-1SCTUE9QV0KCV3G7VE4L2P4J5.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "DiskArbitration"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/dispatch.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/Dispatch-7C4SDSFBM8SIFUB1SWE429TKJ.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/Dispatch-5T56FOWEHKS6TWV5OGLHDHODO.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Dispatch"
   },
   {
-    "clangModuleMapPath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/Build\/Products\/Debug\/FlutterMacOS.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/Build\/Intermediates.noindex\/SwiftExplicitPrecompiledModules\/FlutterMacOS-1ID535VTH53Y2RKETUWT8ENW0.pcm",
+    "clangModuleMapPath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/Build\/Products\/Debug\/FlutterMacOS.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/Build\/Intermediates.noindex\/SwiftExplicitPrecompiledModules\/FlutterMacOS-20HPUNVBWLN69LT7DK1M67UCO.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "FlutterMacOS"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Foundation.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/Foundation-6VBUWO8FTROJ939Z9G0KA4KJN.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/Foundation-9TMA8RD1UVDU4EPXWHBROUJP5.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Foundation"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/IOKit.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/IOKit-635GV14OOTIDC1C4XL1WX8Q3J.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/IOKit-5CEOMXU6EEZ86UE6E6YV8871S.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "IOKit"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/IOSurface.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/IOSurface-2S9M37NYOBCQJZF0RXMOF2NF0.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/IOSurface-BB8MRSYOT6BBR6F5JZ0DNLS5H.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "IOSurface"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ImageIO.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/ImageIO-245M3FHWPWYDHCIIJ6JD41BFW.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/ImageIO-38APYI01E78HC17NUM9MSG72Q.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ImageIO"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinBasic.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/MachO-4BZTC59FN7UO6XX4F8C523BHS.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/MachO-DPQBB1E61UGNVC5UPXJYOXFL0.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "MachO"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Metal.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/Metal-7HIST87ZZ5KYBCGKS0KH2U6R8.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/Metal-RVWNZQUJJI1ZKNNQPF3VUNLT.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Metal"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/OSLog.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/OSLog-3IZAVRRIAZ7S9SMP2OCUSS0UB.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/OSLog-6W3XSOW2AHKD7UHG5E1LDYIM2.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "OSLog"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/ObjectiveC.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/ObjectiveC-8LDLJT1B13C6DLR4CUS7RJF8Q.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/ObjectiveC-1FDAW587723HABO83A7OZ3SQ6.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ObjectiveC"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/OpenGL.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/OpenGL-5F1KI9EZT5B7B76ZHFLF5S4R3.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/OpenGL-D3IX3PBXZ5ITV1RSZXGHH3ISH.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "OpenGL"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/QuartzCore.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/QuartzCore-CLOUJNUV2FD0UVJ20TRAGIYZ8.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/QuartzCore-B1HVFYDI2GJ4WT498LS0PTAMD.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "QuartzCore"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Security.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/Security-4I369FXHVCXAJ52MOMEC49JEI.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/Security-CMWX1D5PP8E06A6WWV3NIF847.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Security"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/Spatial\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/Spatial-DL2PL2FH84U150Q9XR6264P71.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/Spatial-56BSORUMVHEEL1TC4X57DJLWY.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Spatial"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/SwiftShims-92K0M2VGQXIMJLTBIZQKCBYJ.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/SwiftShims-CFYIRFX4AFD4FMT4XTGNG8617.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "SwiftShims"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/SwiftUI.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/SwiftUI-808ZSD9ROX8TI8W18UVO5Z15B.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/SwiftUI-57UDGEDJ5095LKN54XDMDP993.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "SwiftUI"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/SwiftUICore.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/SwiftUICore-748J9GM2RJLEUHWEAWB54PXOD.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/SwiftUICore-AUYCC7WO3D53TLLD44BL7O8HY.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "SwiftUICore"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Symbols.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/Symbols-9WSRHSG1JR9X660BVK9P9WGGT.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/Symbols-5PNSDVHSQNZA05XPU1T4K2UYW.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Symbols"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/UniformTypeIdentifiers.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/UniformTypeIdentifiers-DTM9TFY2FH07LXY3E5OK6OSBD.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/UniformTypeIdentifiers-B1TQFZPLN6FGBPOF08O97YMIY.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "UniformTypeIdentifiers"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/xpc.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/XPC-5FVV7THOTB5FXEMAAEHXL57V4.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/XPC-1BGY134TFIK2XYYQO2O69B4O5.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "XPC"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation1.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_AvailabilityInternal-4B3WQA1WBYBJ93KL41II67NUO.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_AvailabilityInternal-19VDKRLI31K3WOW0QHMARJH43.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_AvailabilityInternal"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_Builtin_float-2RX9DAGEBBUY31FQJ0E4HT7GM.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_Builtin_float-180KKH61ASD558TPSDY4PXYPT.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_float"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_Builtin_intrinsics-3LNL06UT4ENGDAKYEGPYDBBIB.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_Builtin_intrinsics-9SNCHRBHNU7RRUVC6MS504SU7.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_intrinsics"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_Builtin_inttypes-BNJ8BYWTISJQNK0AQQR21IMRQ.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_Builtin_inttypes-BY4XQO7KKMZ3V2PW8C0HIK2LU.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_inttypes"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_Builtin_limits-7S54HEREQKZF899F604P8EZMI.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_Builtin_limits-DSTVNVC7VU5BHFDK2RCIGDTWK.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_limits"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_Builtin_stdarg-9NGYTJVIURGVB0DYVOCF9VBYB.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_Builtin_stdarg-78JR8N9VJ79M80LNEE7TKWH1A.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdarg"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_Builtin_stdatomic-9EJFPTBD15F0OOOSK5S0V1JR0.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_Builtin_stdatomic-98M0UMX64KOB9DATF4L0WVFRS.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdatomic"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_Builtin_stdbool-3JKH60KW9IFH8HIE7KR7KCHZF.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_Builtin_stdbool-1WRVAZPK0TGG6SAP4NJLKX80A.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdbool"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_Builtin_stddef-33A3DBU7VLZD9I2GGD1KVD5ZR.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_Builtin_stddef-36GP0JA1Y27FFBJG4KT5FTDUC.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stddef"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_Builtin_stdint-CLVHA765NKIZPX3OYQZ68Q1EN.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_Builtin_stdint-CMNXNNBIPT3SNA3P5LIH2S7E1.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdint"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_Builtin_tgmath-3DVNBG7T4ANQH1D0H8WQ06A98.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_Builtin_tgmath-295WJKLADT3ZE5V9D6FT2SWNN.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_tgmath"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation1.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_DarwinFoundation1-EL4NPUSFJH0JAK7ASAK3TU8UA.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_DarwinFoundation1-A3D9J1E0FE6L0S72CPVY71O4J.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation1"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation2.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_DarwinFoundation2-5A1DDWIFUZ9FZX6ACIPUXPYEK.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_DarwinFoundation2-BB0BUXCBYJBFMO589RVEP1SMC.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation2"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation3.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_DarwinFoundation3-630R1OPFWFDT8Y5SWGG48OBQX.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_DarwinFoundation3-5AXI95BG77C97NE0LGWVQMWIB.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation3"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/_SwiftConcurrencyShims-5HE8TWRVL242T8R1N3MGT17ZA.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/_SwiftConcurrencyShims-A8PBQBVN0PFFKPNYJXTLCU0VE.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_SwiftConcurrencyShims"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/launch.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/launch-4WBPQWKWEHEFUP3E3GI0SH7RE.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/launch-CIV8XH2WK8PHITWRBKPSHRVRA.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "launch"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/libDER\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/libDER-5KBER1EVBC3XYLYCCYYUE04YM.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/libDER-1RUIDPHLCQEAYA7X4RZKW8GKV.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "libDER"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/libkern.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/libkern-2EMJZISS6XLSZLQ8QAWM4MS22.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/libkern-5F33AURIPEY7K462E2M1A9618.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "libkern"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/os-O7KUG2K454ZQ8QV0YLE2S5MV.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/os-2FDD2SQ8EWKRMB7I6H2D7KKCE.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/os_object-DXRXGNN1M6WZ9WAUFLE0ZPAHN.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/os_object-37UBG8CNZGM2PJFJ3379ZUBZI.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os_object"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/os_workgroup-5B0MGTGG3BVASC195GC6U4P1S.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/os_workgroup-1VDRF5JC1J7IGNAMDOEF754U2.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os_workgroup"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/ptrauth-8EM3VGSGX0NK6F7KCH7KSY46J.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/ptrauth-7YGS6WCIXQNPX4CT1ME6T0J8N.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ptrauth"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/17\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/ptrcheck-54PI280RO3PTVTFBUTQ4JH17M.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/ptrcheck-B1YEY2F205OATK9F5BXNIUIO3.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ptrcheck"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/simd\/module.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/simd-75K6T1F0JQN6W7UK28A9833E3.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/simd-DU16EM448C0IUOAKK8LSF1JGI.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "simd"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation2.modulemap",
-    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/flutter_application_1\/build\/macos\/ModuleCache.noindex\/sys_types-28FI1L9YWWFMT7ZY8SQ68OFBQ.pcm",
+    "clangModulePath" : "\/Users\/sarahdombroski\/github\/nutrition-tracker\/build\/macos\/ModuleCache.noindex\/sys_types-9RFZJQ23DSSSIBMFO42JBEWV5.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "sys_types"

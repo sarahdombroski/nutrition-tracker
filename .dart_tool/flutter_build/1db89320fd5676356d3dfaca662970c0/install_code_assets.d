@@ -1,0 +1,1 @@
+ /Users/sarahdombroski/github/nutrition-tracker/.dart_tool/flutter_build/1db89320fd5676356d3dfaca662970c0/native_assets.json: 
