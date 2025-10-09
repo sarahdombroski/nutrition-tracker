@@ -28,14 +28,14 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
       home: const MyHomePage(title: 'Nutrition Tracker'),
     );
   }
 }
-
 class MyHomePage extends StatefulWidget {
+
   const MyHomePage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -55,19 +55,23 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _calories = 0;
+  int _protein = 0;
+  int _carbs = 0;
+  int _fats = 0;
+  int _water = 0;
 
-  void _incrementCalories() {
+  void _addWater() {
     final TextEditingController controller = TextEditingController();
 
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Add Calories'),
+          title: Text('Add Water'),
           content: TextField(
             controller: controller,
             keyboardType: TextInputType.number,
-            decoration: InputDecoration(hintText: "Enter calories"),
+            decoration: InputDecoration(hintText: "Enter water (oz)"),
           ),
           actions: <Widget>[
             TextButton(
@@ -84,10 +88,84 @@ class _MyHomePageState extends State<MyHomePage> {
                   final parsed = int.tryParse(text);
                   if (parsed != null) {
                     setState(() {
-                      _calories += parsed;
+                      _water += parsed;
                     });
                   }
                 }
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _addFood() {
+    final TextEditingController caloriesController = TextEditingController();
+    final TextEditingController proteinController = TextEditingController();
+    final TextEditingController carbsController = TextEditingController();
+    final TextEditingController fatsController = TextEditingController();
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Add Food'),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                TextField(
+                  controller: caloriesController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Enter calories"),
+                ),
+                TextField(
+                  controller: proteinController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Enter protein (g)"),
+                ),
+                TextField(
+                  controller: carbsController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Enter carbs (g)"),
+                ),
+                TextField(
+                  controller: fatsController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Enter fats (g)"),
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: Text('CANCEL'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: Text('OK'),
+              onPressed: () {
+                final caloriesText = caloriesController.text.trim();
+                final proteinText = proteinController.text.trim();
+                final carbsText = carbsController.text.trim();
+                final fatsText = fatsController.text.trim();
+                
+                final calories = int.tryParse(caloriesText) ?? 0;
+                final protein = int.tryParse(proteinText) ?? 0;
+                final carbs = int.tryParse(carbsText) ?? 0;
+                final fats = int.tryParse(fatsText) ?? 0;
+                
+                setState(() {
+                  _calories += calories;
+                  _protein += protein;
+                  _carbs += carbs;
+                  _fats += fats;
+                });
+                
                 Navigator.of(context).pop();
               },
             ),
@@ -134,30 +212,45 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Calories', style: Theme.of(context).textTheme.headlineMedium,),
-            Text('$_calories', style: Theme.of(context).textTheme.headlineMedium,),
-            ElevatedButton(
-              onPressed: _incrementCalories,
-              child: Text('Add Calories'),
+            Text('Water', style: Theme.of(context).textTheme.headlineMedium),
+            Text('$_water', style: Theme.of(context).textTheme.headlineMedium),
+
+            Text('Calories', style: Theme.of(context).textTheme.headlineMedium),
+            Text(
+              '$_calories',
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
+
+            Text('Protein', style: Theme.of(context).textTheme.headlineMedium),
+            Text(
+              '$_protein',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text('Carbs', style: Theme.of(context).textTheme.headlineMedium),
+            Text('$_carbs', style: Theme.of(context).textTheme.headlineMedium),
+            Text('Fats', style: Theme.of(context).textTheme.headlineMedium),
+            Text('$_fats', style: Theme.of(context).textTheme.headlineMedium),
           ],
         ),
       ),
       floatingActionButton: Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-      FloatingActionButton(
-        onPressed: _incrementCalories,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: _addWater,
+            tooltip: 'Add Water',
+            backgroundColor: Colors.blue,
+            child: const Icon(Icons.water_drop, color: Colors.white),
+          ),
+          SizedBox(width: 10), // Add some space between the buttons
+          FloatingActionButton(
+            onPressed: _addFood,
+            tooltip: 'Add Food',
+            backgroundColor: Colors.green,
+            child: const Icon(Icons.restaurant, color: Colors.white),
+          ),
+        ],
       ),
-      SizedBox(width: 10), // Add some space between the buttons
-      FloatingActionButton(
-        onPressed: _incrementCalories,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-      ])
     );
   }
 }
