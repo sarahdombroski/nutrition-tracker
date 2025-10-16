@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF4CAF50)),
       ),
       home: const MyHomePage(title: 'Nutrition Tracker'),
     );
@@ -59,6 +59,12 @@ class _MyHomePageState extends State<MyHomePage> {
   int _carbs = 0;
   int _fats = 0;
   int _water = 0;
+
+  int _goalCalories = 2000;
+  int _goalProtein = 150;
+  int _goalCarbs = 250;
+  int _goalFats = 70;
+  int _goalWater = 64;
 
   void _addWater() {
     final TextEditingController controller = TextEditingController();
@@ -175,6 +181,94 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  void _editGoals() {
+    final TextEditingController caloriesController = TextEditingController(text: _goalCalories.toString());
+    final TextEditingController proteinController = TextEditingController(text: _goalProtein.toString());
+    final TextEditingController carbsController = TextEditingController(text: _goalCarbs.toString());
+    final TextEditingController fatsController = TextEditingController(text: _goalFats.toString());
+    final TextEditingController waterController = TextEditingController(text: _goalWater.toString());
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Edit Goals'),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text("Goal Calories:"),
+                TextField(
+                  controller: caloriesController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Goal calories"),
+                ),
+                Text("Goal Protein (g):"),
+                TextField(
+                  controller: proteinController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Goal protein (g)"),
+                ),
+                Text("Goal Carbs (g):"),
+                TextField(
+                  controller: carbsController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Goal carbs (g)"),
+                ),
+                Text("Goal Fats (g):"),
+                TextField(
+                  controller: fatsController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Goal fats (g)"),
+                ),
+                Text("Goal Water (oz):"),
+                TextField(
+                  controller: waterController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Goal water (oz)"),
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: Text('CANCEL'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: Text('OK'),
+              onPressed: () {
+                final caloriesText = caloriesController.text.trim();
+                final proteinText = proteinController.text.trim();
+                final carbsText = carbsController.text.trim();
+                final fatsText = fatsController.text.trim();
+                final waterText = waterController.text.trim();
+                
+                final calories = int.tryParse(caloriesText) ?? 0;
+                final protein = int.tryParse(proteinText) ?? 0;
+                final carbs = int.tryParse(carbsText) ?? 0;
+                final fats = int.tryParse(fatsText) ?? 0;
+                final water = int.tryParse(waterText) ?? 0;
+                
+                setState(() {
+                  if (caloriesText.isNotEmpty) _goalCalories = calories;
+                  if (proteinText.isNotEmpty) _goalProtein = protein;
+                  if (carbsText.isNotEmpty) _goalCarbs = carbs;
+                  if (fatsText.isNotEmpty) _goalFats = fats;
+                  if (waterText.isNotEmpty) _goalWater = water;
+                });
+                
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -213,29 +307,42 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('Water', style: Theme.of(context).textTheme.headlineMedium),
-            Text('$_water', style: Theme.of(context).textTheme.headlineMedium),
+            Text('$_water / $_goalWater', style: Theme.of(context).textTheme.headlineSmall),
+            Divider(height: 20, thickness: 1, indent: 100, endIndent: 100),
 
             Text('Calories', style: Theme.of(context).textTheme.headlineMedium),
             Text(
-              '$_calories',
-              style: Theme.of(context).textTheme.headlineMedium,
+              '$_calories / $_goalCalories',
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
+            Divider(height: 20, thickness: 1, indent: 100, endIndent: 100),
 
             Text('Protein', style: Theme.of(context).textTheme.headlineMedium),
             Text(
-              '$_protein',
-              style: Theme.of(context).textTheme.headlineMedium,
+              '$_protein / $_goalProtein',
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
+            Divider(height: 20, thickness: 1, indent: 100, endIndent: 100),
+
             Text('Carbs', style: Theme.of(context).textTheme.headlineMedium),
-            Text('$_carbs', style: Theme.of(context).textTheme.headlineMedium),
+            Text('$_carbs / $_goalCarbs', style: Theme.of(context).textTheme.headlineSmall),
+            Divider(height: 20, thickness: 1, indent: 100, endIndent: 100),
+
             Text('Fats', style: Theme.of(context).textTheme.headlineMedium),
-            Text('$_fats', style: Theme.of(context).textTheme.headlineMedium),
+            Text('$_fats / $_goalFats', style: Theme.of(context).textTheme.headlineSmall),
           ],
         ),
       ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          FloatingActionButton(
+            onPressed: _editGoals,
+            tooltip: 'Edit Goals',
+            backgroundColor: const Color.fromARGB(255, 202, 115, 112),
+            child: const Icon(Icons.edit, color: Colors.white),
+          ),
+          SizedBox(width: 10), // Add some space between the buttons
           FloatingActionButton(
             onPressed: _addWater,
             tooltip: 'Add Water',
