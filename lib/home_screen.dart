@@ -3,7 +3,9 @@ import 'widgets/food_dialog.dart';
 import 'widgets/water_dialog.dart';
 import 'widgets/goals_dialog.dart';
 import 'second_screen.dart';
-import 'save_to_file.dart';
+import 'tracker_data.dart';
+import 'dart:convert';
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -26,6 +28,40 @@ class _MyHomePageState extends State<MyHomePage> {
   int _goalCarbs = 250;
   int _goalFats = 70;
   int _goalWater = 64;
+
+  @override
+  void initState() {
+    super.initState();
+    loadNutritionData().then((data) {
+      setState(() {
+        _calories = data.calories;
+        _protein = data.protein;
+        _carbs = data.carbs;
+        _fats = data.fats;
+        _water = data.water;
+      });
+    });
+  }
+
+  Future<NutritionData> loadNutritionData() async {
+    final file = await localFile;
+    if (await file.exists()) {
+      final contents = await file.readAsString();
+      final data = jsonDecode(contents);
+      return NutritionData.fromJson(data);
+    } else {
+      // Create a new file with default values
+      final defaultData = NutritionData(
+        calories: 0,
+        carbs: 0,
+        fats: 0,
+        protein: 0,
+        water: 0,
+      );
+    await file.writeAsString(jsonEncode(defaultData.toJson()));
+    return defaultData;
+    }
+  }
 
   void _addWater() {
     showDialog(
@@ -95,8 +131,6 @@ class _MyHomePageState extends State<MyHomePage> {
     };
 
     writeToFile(data);
-    String content = await readFromFile();
-    print(content);
   }
 
   @override
