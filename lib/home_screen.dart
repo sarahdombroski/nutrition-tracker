@@ -32,34 +32,52 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    loadNutritionData().then((data) {
+    loadData().then((data) {
       setState(() {
-        _calories = data.calories;
-        _protein = data.protein;
-        _carbs = data.carbs;
-        _fats = data.fats;
-        _water = data.water;
+        _calories = data.nutritionData.calories;
+        _protein = data.nutritionData.protein;
+        _carbs = data.nutritionData.carbs;
+        _fats = data.nutritionData.fats;
+        _water = data.nutritionData.water;
+
+        _goalCalories = data.goalsData.calorieGoal;
+        _goalProtein = data.goalsData.proteinGoal;
+        _goalCarbs = data.goalsData.carbGoal;
+        _goalFats = data.goalsData.fatGoal;
+        _goalWater = data.goalsData.waterGoal;
       });
     });
   }
 
-  Future<NutritionData> loadNutritionData() async {
-    final file = await localFile;
-    if (await file.exists()) {
+  Future<TrackerData> loadData() async {
+    try {
+      final file = await localFile;
       final contents = await file.readAsString();
-      final data = jsonDecode(contents);
-      return NutritionData.fromJson(data);
-    } else {
-      // Create a new file with default values
-      final defaultData = NutritionData(
-        calories: 0,
-        carbs: 0,
-        fats: 0,
-        protein: 0,
-        water: 0,
+      final Map<String, dynamic> jsonData = jsonDecode(contents);
+      final nutritionData = NutritionData.fromJson(jsonData['nutritionData']);
+      final goalsData = GoalsData.fromJson(jsonData['goalsData']);
+      return TrackerData(
+        nutritionData: nutritionData,
+        goalsData: goalsData,
       );
-    await file.writeAsString(jsonEncode(defaultData.toJson()));
-    return defaultData;
+    } catch (e) {
+      // If encountering an error, return default data
+      return TrackerData(
+        nutritionData: NutritionData(
+          calories: 0,
+          carbs: 0,
+          fats: 0,
+          protein: 0,
+          water: 0,
+        ),
+        goalsData: GoalsData(
+          calorieGoal: 2000,
+          proteinGoal: 150,
+          carbGoal: 250,
+          fatGoal: 70,
+          waterGoal: 64,
+        ),
+      );
     }
   }
 
@@ -70,13 +88,14 @@ class _MyHomePageState extends State<MyHomePage> {
         onSubmit: (waterAmount) {
           setState(() {
             _water += waterAmount;
+            _saveInfo();
           });
         },
       ),
     );
   }
 
-  void _addFood() {
+  void _updateNutrients() {
     showDialog(
       context: context,
       builder: (context) => FoodDialog(
@@ -86,6 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
             _protein += pro;
             _carbs += carb;
             _fats += fat;
+            _saveInfo();
           });
         },
       ),
@@ -115,6 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 _goalCarbs = carbs;
                 _goalFats = fats;
                 _goalWater = water;
+                _saveInfo();
               });
             },
       ),
@@ -123,11 +144,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _saveInfo() async {
     final data = {
-      'calories': _calories,
-      'protein': _protein,
-      'fats': _fats,
-      'carbs': _carbs,
-      'water': _water,
+      'nutritionData' :{
+        'calories': _calories,
+        'protein': _protein,
+        'fats': _fats,
+        'carbs': _carbs,
+        'water': _water,
+      },
+      'goalsData' : {
+        'calorieGoal': _goalCalories,
+        'proteinGoal': _goalProtein,
+        'fatGoal': _goalFats,
+        'carbGoal': _goalCarbs,
+        'waterGoal': _goalWater,
+      },
     };
 
     writeToFile(data);
@@ -198,19 +228,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           SizedBox(width: 10), // Add some space between the buttons
           FloatingActionButton(
-            onPressed: _addFood,
+            onPressed: _updateNutrients,
             tooltip: 'Add Food',
             backgroundColor: Colors.green,
             child: const Icon(Icons.restaurant, color: Colors.white),
           ),
           SizedBox(width: 10),
-          FloatingActionButton(
-            onPressed: _saveInfo,
-            tooltip: 'Save Data',
-            backgroundColor: Colors.indigo,
-            child: const Icon(Icons.save, color: Colors.white),
-          ),
-
           FloatingActionButton(
             onPressed: () {
               Navigator.push(
