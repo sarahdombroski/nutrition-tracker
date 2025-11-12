@@ -1,15 +1,45 @@
 import 'package:flutter/material.dart';
+import 'widgets/create_food_dialog.dart';
 
-final food = [
-  {'name': 'Macaroni', 'calories': 275, 'protein': 20, 'carbs': 40, 'fat': 23},
-  {'name': 'Potato', 'calories': 250, 'protein': 10, 'carbs': 50, 'fat': 16},
-  {'name': 'Pancake', 'calories': 200, 'protein': 4, 'carbs': 42, 'fat': 10},
-];
-
-class SecondScreen extends StatelessWidget {
+class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});
 
-  void _addToList() {}
+  @override
+  State<SecondScreen> createState() => _SecondScreenState();
+}
+
+class _SecondScreenState extends State<SecondScreen> {
+
+  List<Map<String, dynamic>> food = [
+    {'name': 'Macaroni', 'calories': 275, 'protein': 20, 'carbs': 40, 'fat': 23},
+    {'name': 'Potato', 'calories': 250, 'protein': 10, 'carbs': 50, 'fat': 16},
+    {'name': 'Pancake', 'calories': 200, 'protein': 4, 'carbs': 42, 'fat': 10},
+  ];
+
+  void _addToList() {
+    showDialog(
+      context: context,
+      builder: (context) => CreateFoodDialog(
+        onSubmit: (name, calories, protein, carbs, fat) {
+          setState(() {
+            food.add({
+              'name': name,
+              'calories': calories,
+              'protein': protein,
+              'carbs': carbs,
+              'fat': fat,
+            });
+          });
+        },
+      ),
+    );
+  }
+
+  void _deleteFood(int index) {
+    setState(() {
+      food.removeAt(index);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +55,7 @@ class SecondScreen extends StatelessWidget {
               itemCount: food.length,
               itemBuilder: (context, index) {
                 final item = food[index];
+
                 return Container(
                   decoration: BoxDecoration(
                     border: Border.all(
@@ -53,7 +84,7 @@ class SecondScreen extends StatelessWidget {
                             children: [
                               FloatingActionButton(
                                 onPressed: () {
-                                  // Handle button press
+                                  _deleteFood(index);
                                 },
                                 tooltip: 'Delete from List',
                                 mini: true,
