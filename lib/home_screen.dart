@@ -3,8 +3,7 @@ import 'widgets/food_dialog.dart';
 import 'widgets/water_dialog.dart';
 import 'widgets/goals_dialog.dart';
 import 'second_screen.dart';
-import 'tracker_data.dart';
-import 'dart:convert';
+import 'data.dart' as globals;
 
 
 class MyHomePage extends StatefulWidget {
@@ -17,68 +16,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _calories = 0;
-  int _protein = 0;
-  int _carbs = 0;
-  int _fats = 0;
-  int _water = 0;
-
-  int _goalCalories = 2000;
-  int _goalProtein = 150;
-  int _goalCarbs = 250;
-  int _goalFats = 70;
-  int _goalWater = 64;
-
   @override
   void initState() {
     super.initState();
-    loadData().then((data) {
+    globals.loadData().then((data) {
       setState(() {
-        _calories = data.nutritionData.calories;
-        _protein = data.nutritionData.protein;
-        _carbs = data.nutritionData.carbs;
-        _fats = data.nutritionData.fats;
-        _water = data.nutritionData.water;
-
-        _goalCalories = data.goalsData.calorieGoal;
-        _goalProtein = data.goalsData.proteinGoal;
-        _goalCarbs = data.goalsData.carbGoal;
-        _goalFats = data.goalsData.fatGoal;
-        _goalWater = data.goalsData.waterGoal;
+        globals.updateData(data);
       });
     });
-  }
-
-  Future<TrackerData> loadData() async {
-    try {
-      final file = await localFile;
-      final contents = await file.readAsString();
-      final Map<String, dynamic> jsonData = jsonDecode(contents);
-      final nutritionData = NutritionData.fromJson(jsonData['nutritionData']);
-      final goalsData = GoalsData.fromJson(jsonData['goalsData']);
-      return TrackerData(
-        nutritionData: nutritionData,
-        goalsData: goalsData,
-      );
-    } catch (e) {
-      // If encountering an error, return default data
-      return TrackerData(
-        nutritionData: NutritionData(
-          calories: 0,
-          carbs: 0,
-          fats: 0,
-          protein: 0,
-          water: 0,
-        ),
-        goalsData: GoalsData(
-          calorieGoal: 2000,
-          proteinGoal: 150,
-          carbGoal: 250,
-          fatGoal: 70,
-          waterGoal: 64,
-        ),
-      );
-    }
   }
 
   void _addWater() {
@@ -87,8 +32,8 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (context) => WaterDialog(
         onSubmit: (waterAmount) {
           setState(() {
-            _water += waterAmount;
-            _saveInfo();
+            globals.water += waterAmount;
+            globals.saveData();
           });
         },
       ),
@@ -101,11 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (context) => FoodDialog(
         onSubmit: (cal, pro, carb, fat) {
           setState(() {
-            _calories += cal;
-            _protein += pro;
-            _carbs += carb;
-            _fats += fat;
-            _saveInfo();
+            globals.protein += pro;
+            globals.calories += cal;
+            globals.carbs += carb;
+            globals.fats += fat;
+            globals.saveData();
           });
         },
       ),
@@ -116,11 +61,11 @@ class _MyHomePageState extends State<MyHomePage> {
     showDialog(
       context: context,
       builder: (context) => EditGoalsDialog(
-        goalCalories: _goalCalories,
-        goalProtein: _goalProtein,
-        goalCarbs: _goalCarbs,
-        goalFats: _goalFats,
-        goalWater: _goalWater,
+        goalCalories: globals.goalCalories,
+        goalProtein: globals.goalProtein,
+        goalCarbs: globals.goalCarbs,
+        goalFats: globals.goalFats,
+        goalWater: globals.goalWater,
         onSubmit:
             ({
               required int calories,
@@ -130,37 +75,16 @@ class _MyHomePageState extends State<MyHomePage> {
               required int water,
             }) {
               setState(() {
-                _goalCalories = calories;
-                _goalProtein = protein;
-                _goalCarbs = carbs;
-                _goalFats = fats;
-                _goalWater = water;
-                _saveInfo();
+                globals.goalCalories = calories;
+                globals.goalProtein = protein;
+                globals.goalCarbs = carbs;
+                globals.goalFats = fats;
+                globals.goalWater = water;
+                globals.saveData();
               });
             },
       ),
     );
-  }
-
-  void _saveInfo() async {
-    final data = {
-      'nutritionData' :{
-        'calories': _calories,
-        'protein': _protein,
-        'fats': _fats,
-        'carbs': _carbs,
-        'water': _water,
-      },
-      'goalsData' : {
-        'calorieGoal': _goalCalories,
-        'proteinGoal': _goalProtein,
-        'fatGoal': _goalFats,
-        'carbGoal': _goalCarbs,
-        'waterGoal': _goalWater,
-      },
-    };
-
-    writeToFile(data);
   }
 
   @override
@@ -176,35 +100,35 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text('Water', style: Theme.of(context).textTheme.headlineMedium),
             Text(
-              '$_water / $_goalWater',
+              '${globals.water} / ${globals.goalWater}',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             Divider(height: 20, thickness: 1, indent: 100, endIndent: 100),
 
             Text('Calories', style: Theme.of(context).textTheme.headlineMedium),
             Text(
-              '$_calories / $_goalCalories',
+              '${globals.calories} / ${globals.goalCalories}',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             Divider(height: 20, thickness: 1, indent: 100, endIndent: 100),
 
             Text('Protein', style: Theme.of(context).textTheme.headlineMedium),
             Text(
-              '$_protein / $_goalProtein',
+              '${globals.protein} / ${globals.goalProtein}',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             Divider(height: 20, thickness: 1, indent: 100, endIndent: 100),
 
             Text('Carbs', style: Theme.of(context).textTheme.headlineMedium),
             Text(
-              '$_carbs / $_goalCarbs',
+              '${globals.carbs} / ${globals.goalCarbs}',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             Divider(height: 20, thickness: 1, indent: 100, endIndent: 100),
 
             Text('Fats', style: Theme.of(context).textTheme.headlineMedium),
             Text(
-              '$_fats / $_goalFats',
+              '${globals.fats} / ${globals.goalFats}',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
           ],

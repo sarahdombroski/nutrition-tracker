@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'data.dart' as globals;
 import 'widgets/create_food_dialog.dart';
 
 class SecondScreen extends StatefulWidget {
@@ -10,11 +11,7 @@ class SecondScreen extends StatefulWidget {
 
 class _SecondScreenState extends State<SecondScreen> {
 
-  List<Map<String, dynamic>> food = [
-    {'name': 'Macaroni', 'calories': 275, 'protein': 20, 'carbs': 40, 'fat': 23},
-    {'name': 'Potato', 'calories': 250, 'protein': 10, 'carbs': 50, 'fat': 16},
-    {'name': 'Pancake', 'calories': 200, 'protein': 4, 'carbs': 42, 'fat': 10},
-  ];
+  List<Map<String, dynamic>> food = globals.food;
 
   void _addToList() {
     showDialog(
@@ -22,13 +19,14 @@ class _SecondScreenState extends State<SecondScreen> {
       builder: (context) => CreateFoodDialog(
         onSubmit: (name, calories, protein, carbs, fat) {
           setState(() {
-            food.add({
+            globals.addFood({
               'name': name,
               'calories': calories,
               'protein': protein,
               'carbs': carbs,
               'fat': fat,
             });
+            globals.saveData();
           });
         },
       ),
@@ -37,7 +35,8 @@ class _SecondScreenState extends State<SecondScreen> {
 
   void _deleteFood(int index) {
     setState(() {
-      food.removeAt(index);
+      globals.removeFood(index);
+      globals.saveData();
     });
   }
 

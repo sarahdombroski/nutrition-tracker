@@ -1,25 +1,100 @@
-import 'dart:io';
-import 'package:path_provider/path_provider.dart';
+library;
+
+import 'file_utils.dart';
 import 'dart:convert';
-export 'tracker_data.dart';
 
-Future<String> get _localPath async {
-  final directory = await getApplicationSupportDirectory();
-  return directory.path;
+int calories = 0;
+int protein = 0;
+int carbs = 0;
+int fats = 0;
+int water = 0;
+
+int goalCalories = 2000;
+int goalProtein = 150;
+int goalCarbs = 250;
+int goalFats = 70;
+int goalWater = 64;
+
+List<Map<String, dynamic>> food = [];
+
+Map<String, Map<String, dynamic>> toJson() {
+  return {
+    'nutritionData': {
+      'calories': calories,
+      'protein': protein,
+      'carbs': carbs,
+      'fats': fats,
+      'water': water,
+    },
+    'goalsData': {
+      'calorieGoal': goalCalories,
+      'proteinGoal': goalProtein,
+      'carbGoal': goalCarbs,
+      'fatGoal': goalFats,
+      'waterGoal': goalWater,
+    },
+    'foodData': {'food': food},
+  };
 }
 
-Future<File> get _localFile async {
-  final path = await _localPath;
-  return File('$path/saveData.json');
+void addFood(Map<String, dynamic> newFood) {
+  food.add(newFood);
 }
 
-Future<File> writeToFile(Map<String, Map<String, dynamic>> data) async {
-  final file = await _localFile;
-  return file.writeAsString(jsonEncode(data));
+void removeFood(int index) {
+  food.removeAt(index);
 }
 
-Future<File> get localFile async => _localFile;
-Future<String> get localPath async => _localPath;
+void updateData(TrackerData data) {
+  calories = data.nutritionData.calories;
+  protein = data.nutritionData.protein;
+  carbs = data.nutritionData.carbs;
+  fats = data.nutritionData.fats;
+  water = data.nutritionData.water;
+
+  goalCalories = data.goalsData.calorieGoal;
+  goalProtein = data.goalsData.proteinGoal;
+  goalCarbs = data.goalsData.carbGoal;
+  goalFats = data.goalsData.fatGoal;
+  goalWater = data.goalsData.waterGoal;
+}
+
+void saveData() async {
+    final data = toJson();
+    await writeToFile(data);
+}
+
+Future<TrackerData> loadData() async {
+    try {
+      final file = await localFile;
+      final contents = await file.readAsString();
+      final Map<String, dynamic> jsonData = jsonDecode(contents);
+      final nutritionData = NutritionData.fromJson(jsonData['nutritionData']);
+      final goalsData = GoalsData.fromJson(jsonData['goalsData']);
+      return TrackerData(
+        nutritionData: nutritionData,
+        goalsData: goalsData,
+      );
+    } catch (e) {
+      // If encountering an error, return default data
+      return TrackerData(
+        nutritionData: NutritionData(
+          calories: 0,
+          carbs: 0,
+          fats: 0,
+          protein: 0,
+          water: 0,
+        ),
+        goalsData: GoalsData(
+          calorieGoal: 2000,
+          proteinGoal: 150,
+          carbGoal: 250,
+          fatGoal: 70,
+          waterGoal: 64,
+        ),
+      );
+    }
+  }
 
 class NutritionData {
   int calories;
