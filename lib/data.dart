@@ -57,6 +57,10 @@ void updateData(TrackerData data) {
   goalCarbs = data.goalsData.carbGoal;
   goalFats = data.goalsData.fatGoal;
   goalWater = data.goalsData.waterGoal;
+
+  food = data.foodData != null && data.foodData!['food'] is List
+      ? List<Map<String, dynamic>>.from(data.foodData!['food'])
+      : [];
 }
 
 void saveData() async {
@@ -71,9 +75,11 @@ Future<TrackerData> loadData() async {
       final Map<String, dynamic> jsonData = jsonDecode(contents);
       final nutritionData = NutritionData.fromJson(jsonData['nutritionData']);
       final goalsData = GoalsData.fromJson(jsonData['goalsData']);
+      final foodData = jsonData['foodData'];
       return TrackerData(
         nutritionData: nutritionData,
         goalsData: goalsData,
+        foodData: foodData,
       );
     } catch (e) {
       // If encountering an error, return default data
@@ -92,6 +98,7 @@ Future<TrackerData> loadData() async {
           fatGoal: 70,
           waterGoal: 64,
         ),
+        foodData: null
       );
     }
   }
@@ -211,7 +218,7 @@ class FoodData {
 class TrackerData {
   NutritionData nutritionData;
   GoalsData goalsData;
-  FoodData? foodData;
+  Map<String, dynamic>? foodData;
 
   TrackerData({
     required this.nutritionData,
@@ -224,9 +231,7 @@ class TrackerData {
     return TrackerData(
       nutritionData: NutritionData.fromJson(json['nutritionData'] ?? {}),
       goalsData: GoalsData.fromJson(json['goalsData'] ?? {}),
-      foodData: json['foodData'] != null
-          ? FoodData.fromJson(json['foodData'])
-          : null,
+      foodData: json['foodData'] ?? {},
     );
   }
 
@@ -235,7 +240,7 @@ class TrackerData {
     return {
       'nutritionData': nutritionData.toJson(),
       'goalsData': goalsData.toJson(),
-      'foodData': foodData?.toJson(),
+      'foodData': foodData ?? {},
     };
   }
 }
