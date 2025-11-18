@@ -3,6 +3,7 @@ import 'widgets/food_dialog.dart';
 import 'widgets/water_dialog.dart';
 import 'widgets/goals_dialog.dart';
 import 'second_screen.dart';
+import 'calendar.dart';
 import 'data.dart' as globals;
 
 
@@ -168,6 +169,18 @@ class _MyHomePageState extends State<MyHomePage> {
             tooltip: 'View Stats',
             backgroundColor: Colors.orange,
             child: const Icon(Icons.bar_chart, color: Colors.white),
+          ),
+          SizedBox(width: 10),
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CalendarScreen()),
+              );
+            },
+            tooltip: 'View Calendar',
+            backgroundColor: Colors.purple,
+            child: const Icon(Icons.calendar_month, color: Colors.white),
           ),
         ],
       ),
