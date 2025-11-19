@@ -166,7 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialPageRoute(builder: (context) => const SecondScreen()),
               );
             },
-            tooltip: 'View Stats',
+            tooltip: 'View Saved Foods',
             backgroundColor: Colors.orange,
             child: const Icon(Icons.bar_chart, color: Colors.white),
           ),
