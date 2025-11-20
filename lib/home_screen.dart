@@ -160,11 +160,15 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           SizedBox(width: 10),
           FloatingActionButton(
-            onPressed: () {
-              Navigator.push(
+            onPressed: () async {
+              final updated = await Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const SecondScreen()),
               );
+
+              if (updated == true) {
+                setState(() {});
+              }
             },
             tooltip: 'View Saved Foods',
             backgroundColor: Colors.orange,

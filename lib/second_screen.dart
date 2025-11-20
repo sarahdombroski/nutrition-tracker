@@ -40,6 +40,17 @@ class _SecondScreenState extends State<SecondScreen> {
     });
   }
 
+  void _updateNutrients(int pro, int cal, int carb, int fat) {
+    setState(() {
+      globals.protein += pro;
+      globals.calories += cal;
+      globals.carbs += carb;
+      globals.fats += fat;
+      globals.saveData();
+    });
+    Navigator.pop(context, true);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,7 +118,7 @@ class _SecondScreenState extends State<SecondScreen> {
                               const SizedBox(width: 8),
                               FloatingActionButton(
                                 onPressed: () {
-                                  // Handle button press
+                                  _updateNutrients(item['protein'], item['calories'], item['carbs'], item['fat']);
                                 },
                                 tooltip: 'Add Food',
                                 mini: true,
