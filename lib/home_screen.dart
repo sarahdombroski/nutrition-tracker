@@ -172,7 +172,7 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             tooltip: 'View Saved Foods',
             backgroundColor: Colors.orange,
-            child: const Icon(Icons.bar_chart, color: Colors.white),
+            child: const Icon(Icons.library_books, color: Colors.white),
           ),
           SizedBox(width: 10),
           FloatingActionButton(
