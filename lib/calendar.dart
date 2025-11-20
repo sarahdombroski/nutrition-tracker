@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'data.dart' as globals;
 
 
 class CalendarScreen extends StatefulWidget {
-  const CalendarScreen({Key? key}) : super(key: key);
+  const CalendarScreen({super.key});
   
   @override
   State<CalendarScreen> createState() => _CalendarScreenState();
@@ -12,6 +13,8 @@ class CalendarScreen extends StatefulWidget {
 class _CalendarScreenState extends State<CalendarScreen> {
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
+
+  Map<String, dynamic>? _dailyData;
   
   @override
   Widget build(BuildContext context) {
@@ -37,6 +40,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
               // LOAD DATA!!!
               print("Selected: $selectedDay");
+              final timestamp = selectedDay.toIso8601String().split('T')[0];
+              globals.getDataFromDate(timestamp).then((data) {
+                setState(() {
+                  _dailyData = data;
+                });
+              });
             },
 
             calendarFormat: CalendarFormat.month,
@@ -52,14 +61,72 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
           // 👇 Display daily data here
           Expanded(
-            child: Center(
-              child: Text(
-                _selectedDay == null
-                    ? "Select a day"
-                    : "Showing logs for: ${_selectedDay!.toLocal().toString().split(' ')[0]}",
-                style: const TextStyle(fontSize: 18),
-              ),
-            ),
+            child: _selectedDay == null
+              ? const Center(
+                  child: Text(
+                    "Select a day",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                )
+              : _dailyData == null || _dailyData!.isEmpty
+                ? const Center(child: Text("Select a day"))
+                : _dailyData!.isEmpty
+                  ? Center(child: Text("No data for selected day"))
+                  : ListView(
+                    padding: const EdgeInsets.all(16),
+                    children: _dailyData!.entries.map((entry) {
+                      final title = entry.key;
+                      final details = entry.value;
+
+                      return Card(
+                        margin: const EdgeInsets.symmetric(vertical: 8),
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                title,
+                                style: const TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              
+                              // Display details
+                              ...details.entries.map((detail) => Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 4),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    detail.key == "nutritionData"
+                                      ? const Text(
+                                          "Nutrition",
+                                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                                        )
+                                      : detail.key == "goalsData" ? 
+                                        Text(
+                                          "Goals",
+                                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                                        )
+                                      : Text(
+                                          detail.key,
+                                          style: const TextStyle(fontSize: 16),
+                                        ),
+                                    Text(
+                                      detail.value.toString(),
+                                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
+                                ),
+                              ))
+                            ],
+                          ),
+                        ),
+                      );
+                    }).toList(),
+                  )
           ),
         ],
       ),

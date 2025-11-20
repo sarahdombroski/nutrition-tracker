@@ -13,9 +13,17 @@ Future<File> get _localFile async {
   return File('$path/saveData.json');
 }
 
-Future<File> writeToFile(Map<String, Map<String, dynamic>> data) async {
+Future<void> addEntryForToday(File file, Map<String, Map<String, dynamic>> entry) async {
+  String content = await file.readAsString();
+  final today = DateTime.now().toIso8601String().split('T')[0];
+  Map<String, dynamic> allData = content.isNotEmpty ? jsonDecode(content) : {};
+  allData[today] = entry[today];
+  await file.writeAsString(jsonEncode(allData));
+}
+
+Future<void> writeToFile(Map<String, Map<String, dynamic>> data) async {
   final file = await _localFile;
-  return file.writeAsString(jsonEncode(data));
+  await addEntryForToday(file, data);
 }
 
 Future<File> get localFile async => _localFile;
