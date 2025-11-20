@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'data.dart' as globals;
 import 'widgets/create_food_dialog.dart';
+import 'widgets/edit_food_dialogue.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});
@@ -49,6 +50,24 @@ class _SecondScreenState extends State<SecondScreen> {
       globals.saveData();
     });
     Navigator.pop(context, true);
+  }
+
+  void _editFood(int index) {
+    final editingFood = food[index];
+    showDialog(
+      context: context, 
+      builder: (context) => EditFoodDialog(previousName: editingFood['name'], previousCalories: editingFood['calories'], previousProtein: editingFood['protein'], previousCarbs: editingFood['carbs'], previousFats: editingFood['fat'], 
+      onSubmit: (newName, newCal, newPro, newCarb, newFat) {
+        setState(() {
+          editingFood['name'] = newName;
+          editingFood['calories'] = newCal;
+          editingFood['protein'] = newPro;
+          editingFood['carbs'] = newCarb;
+          editingFood['fat'] = newFat;
+
+          globals.saveData();
+        });
+      }));
   }
 
   @override
@@ -106,7 +125,7 @@ class _SecondScreenState extends State<SecondScreen> {
                               const SizedBox(width: 8),
                               FloatingActionButton(
                                 onPressed: () {
-                                  // Handle button press
+                                  _editFood(index);
                                 },
                                 tooltip: 'Edit Food',
                                 mini: true,
