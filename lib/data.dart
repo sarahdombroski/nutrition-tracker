@@ -18,7 +18,9 @@ int goalWater = 64;
 List<Map<String, dynamic>> food = [];
 
 Map<String, Map<String, dynamic>> toJson() {
+  final timestamp = DateTime.now();
   return {
+    timestamp.toIso8601String(): {
     'nutritionData': {
       'calories': calories,
       'protein': protein,
@@ -34,6 +36,7 @@ Map<String, Map<String, dynamic>> toJson() {
       'waterGoal': goalWater,
     },
     'foodData': {'food': food},
+    }
   };
 }
 
@@ -73,9 +76,85 @@ Future<TrackerData> loadData() async {
       final file = await localFile;
       final contents = await file.readAsString();
       final Map<String, dynamic> jsonData = jsonDecode(contents);
-      final nutritionData = NutritionData.fromJson(jsonData['nutritionData']);
-      final goalsData = GoalsData.fromJson(jsonData['goalsData']);
-      final foodData = jsonData['foodData'];
+      final timestamp = DateTime.now(); // Use a fixed date or current date as needed
+      String timestampKey;
+      String? matchingKey;
+      String? latestKeyStr;
+      DateTime? latestKeyDate;
+
+      for (final k in jsonData.keys) {
+        final parsed = DateTime.tryParse(k);
+        if (parsed == null) continue;
+        if (latestKeyDate == null || parsed.isAfter(latestKeyDate)) {
+          latestKeyDate = parsed;
+          latestKeyStr = k;
+        }
+        if (parsed.year == timestamp.year &&
+            parsed.month == timestamp.month &&
+            parsed.day == timestamp.day) {
+          matchingKey = k;
+          break;
+        }
+      }
+
+      // Choose timestamp key: prefer exact match, else latest available.
+      if (matchingKey != null) {
+        timestampKey = matchingKey;
+      } else if (latestKeyStr != null) {
+        timestampKey = latestKeyStr;
+      } else {
+        // No timestamps present in file — return default data
+        return TrackerData(
+          nutritionData: NutritionData(
+            calories: 0,
+            carbs: 0,
+            fats: 0,
+            protein: 0,
+            water: 0,
+          ),
+          goalsData: GoalsData(
+            calorieGoal: 2000,
+            proteinGoal: 150,
+            carbGoal: 250,
+            fatGoal: 70,
+            waterGoal: 64,
+          ),
+          foodData: null,
+        );
+      }
+
+      final jsonDataAtTimestamp = jsonData[timestampKey];
+      // If the selected timestamp key does not exist or is malformed, return defaults
+      if (jsonDataAtTimestamp == null || jsonDataAtTimestamp is! Map<String, dynamic>) {
+        return TrackerData(
+          nutritionData: NutritionData(
+            calories: 0,
+            carbs: 0,
+            fats: 0,
+            protein: 0,
+            water: 0,
+          ),
+          goalsData: GoalsData(
+            calorieGoal: 2000,
+            proteinGoal: 150,
+            carbGoal: 250,
+            fatGoal: 70,
+            waterGoal: 64,
+          ),
+          foodData: null,
+        );
+      }
+
+      final nutritionJson = jsonDataAtTimestamp['nutritionData'] is Map
+          ? Map<String, dynamic>.from(jsonDataAtTimestamp['nutritionData'])
+          : <String, dynamic>{};
+      final goalsJson = jsonDataAtTimestamp['goalsData'] is Map
+          ? Map<String, dynamic>.from(jsonDataAtTimestamp['goalsData'])
+          : <String, dynamic>{};
+
+      final nutritionData = NutritionData.fromJson(nutritionJson);
+      final goalsData = GoalsData.fromJson(goalsJson);
+      final foodData = jsonDataAtTimestamp['foodData'];
       return TrackerData(
         nutritionData: nutritionData,
         goalsData: goalsData,
@@ -237,10 +316,13 @@ class TrackerData {
 
   // Convert object to JSON map for saving
   Map<String, dynamic> toJson() {
+    final timestamp = DateTime.now();
     return {
-      'nutritionData': nutritionData.toJson(),
-      'goalsData': goalsData.toJson(),
-      'foodData': foodData ?? {},
+      timestamp.toIso8601String(): {
+        'nutritionData': nutritionData.toJson(),
+        'goalsData': goalsData.toJson(),
+        'foodData': foodData ?? {},
+      }
     };
   }
 }
