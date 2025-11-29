@@ -2,6 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'data.dart' as globals;
 
+// helper function to format the display
+String formatKey(String key) {
+  return key
+      .replaceAllMapped(RegExp(r'([A-Z])'), (m) => ' ${m.group(0)}')
+      .trim()
+      .split(' ')
+      .map((word) => word[0].toUpperCase() + word.substring(1))
+      .join(' ');
+}
 
 class CalendarScreen extends StatefulWidget {
   const CalendarScreen({super.key});
@@ -86,7 +95,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                title,
+                                formatKey(title),
                                 style: const TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
@@ -95,23 +104,15 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               const SizedBox(height: 8),
                               
                               // Display details
-                              ...details.entries.map((detail) => Padding(
+                              ...details.entries.map((detail) {
+                                return Padding(
                                 padding: const EdgeInsets.symmetric(vertical: 4),
-                                child: Row(
+                                child: 
+                                Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    detail.key == "nutritionData"
-                                      ? const Text(
-                                          "Nutrition",
-                                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                                        )
-                                      : detail.key == "goalsData" ? 
-                                        Text(
-                                          "Goals",
-                                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                                        )
-                                      : Text(
-                                          detail.key,
+                                    Text(
+                                          formatKey(detail.key),
                                           style: const TextStyle(fontSize: 16),
                                         ),
                                     Text(
@@ -120,10 +121,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                     ),
                                   ],
                                 ),
-                              ))
+                              );})
                             ],
                           ),
-                        ),
+                        )
                       );
                     }).toList(),
                   )

@@ -3,14 +3,14 @@ import 'data.dart' as globals;
 import 'widgets/create_food_dialog.dart';
 import 'widgets/edit_food_dialogue.dart';
 
-class SecondScreen extends StatefulWidget {
-  const SecondScreen({super.key});
+class DictionaryPage extends StatefulWidget {
+  const DictionaryPage({super.key});
 
   @override
-  State<SecondScreen> createState() => _SecondScreenState();
+  State<DictionaryPage> createState() => _DictionaryPageState();
 }
 
-class _SecondScreenState extends State<SecondScreen> {
+class _DictionaryPageState extends State<DictionaryPage> {
 
   List<Map<String, dynamic>> food = globals.food;
 

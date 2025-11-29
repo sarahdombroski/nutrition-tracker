@@ -42,12 +42,31 @@ class EditGoalsDialog extends StatelessWidget {
       content: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: [
-            _goalField("Goal Calories:", caloriesController),
-            _goalField("Goal Protein (g):", proteinController),
-            _goalField("Goal Carbs (g):", carbsController),
-            _goalField("Goal Fats (g):", fatsController),
-            _goalField("Goal Water (oz):", waterController),
+          children: [          
+            TextField(
+              controller: caloriesController,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(hintText: "Enter calories"),
+            ),
+            Text("Calories"),
+            TextField(
+              controller: proteinController,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(hintText: "Enter protein (g)"),
+            ),
+            Text("Protein (g)"),
+            TextField(
+              controller: carbsController,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(hintText: "Enter carbs (g)"),
+            ),
+            Text("Carbs (g)"),
+            TextField(
+              controller: fatsController,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(hintText: "Enter fat (g)"),
+            ),
+            Text("Fat (g)"),
           ],
         ),
       ),
@@ -77,26 +96,6 @@ class EditGoalsDialog extends StatelessWidget {
           },
         ),
       ],
-    );
-  }
-
-  Widget _goalField(String label, TextEditingController controller) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(label),
-          TextField(
-            controller: controller,
-            keyboardType: TextInputType.number,
-            decoration: InputDecoration(
-              hintText: label,
-              border: const OutlineInputBorder(),
-            ),
-          ),
-        ],
-      ),
     );
   }
 }
